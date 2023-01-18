@@ -1,0 +1,6 @@
+AllCops:
+ Exclude:
+ - 'pifgore.rb'
+
+ Metrcis/MethodLength:
+ Max: 15
