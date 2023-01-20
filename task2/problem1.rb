@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+
 
 class Dates
   puts 'Enter date'
@@ -9,16 +9,16 @@ class Dates
   puts 'year:'
   @year = gets.to_i
 
-  puts 'Enter units of measurement:
+  puts 'Enter units:
   1 - day,
   2 - week,
   3 - month,
   4 - year:'
   units = gets.chomp.to_i
   h_units = { 1 => 'day', 2 => 'week', 3 => 'month', 4 => 'year' }
-  puts 'Enter duration (integer value):'
+  puts 'Enter duration:'
   @duration = gets.to_i
-  puts 'Enter the number of subsequent dates (integer value):'
+  puts 'Enter the number dates :'
   @n = gets.to_i
 
   puts @input = Time.new(@year, @month, @day)
