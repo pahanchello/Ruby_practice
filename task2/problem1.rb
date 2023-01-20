@@ -18,7 +18,7 @@ class Dates
   h_units = { 1 => 'day', 2 => 'week', 3 => 'month', 4 => 'year' }
   puts 'Enter duration:'
   @duration = gets.to_i
-  puts 'Enter the number dates :'
+  puts 'Enter the number of dates :'
   @n = gets.to_i
 
   puts @input = Time.new(@year, @month, @day)
