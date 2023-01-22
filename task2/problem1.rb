@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
 class Dates
-  puts 'Enter date'
-  puts 'day:'
+  puts 'Введите дату'
+  puts 'День:'
   @day = gets.to_i
-  puts 'month:'
+  puts 'Месяц:'
   @month = gets.to_i
-  puts 'year:'
+  puts 'Год:'
   @year = gets.to_i
 
-  puts 'Enter units:
-  1 - day,
-  2 - week,
-  3 - month,
-  4 - year:'
+  puts 'Введите единицы измерения:
+  1 - день,
+  2 - неделя,
+  3 - месяц,
+  4 - год:'
   units = gets.chomp.to_i
-  h_units = { 1 => 'day', 2 => 'week', 3 => 'month', 4 => 'year' }
-  puts 'Enter duration:'
+  h_units = { 1 => 'день', 2 => 'неделя', 3 => 'месяц', 4 => 'год' }
+  puts 'Введите длительность:'
   @duration = gets.to_i
-  puts 'Enter the number of dates :'
+  puts 'Введите кол-во дат которые вы хотитие вывести :'
   @n = gets.to_i
 
   puts @input = Time.new(@year, @month, @day)
@@ -29,7 +29,7 @@ class Dates
   month_counter = -> { @input += @duration.month }
   year_counter = -> { @input += @duration.year }
 
-  hh = { 'day' => day_counter, 'week' => week_counter, 'month' => month_counter, 'year' => year_counter }
+  hh = { 'день' => day_counter, 'неделя' => week_counter, 'месяц' => month_counter, 'год' => year_counter }
 
   if hh[h_units[units]]
     @n.times do
